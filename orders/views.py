@@ -1313,6 +1313,7 @@ def delivery_address_update(request):
         else:
             order_detail.rev_address_gift = sigungu + " " + detail
             order_detail.status = "payment_complete"
+            order_detail.rev_address_zipcode = zip_code
             order_detail.save()
             order_group = order_detail.order_group
             farmer = order_detail.product.farmer
